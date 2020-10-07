@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+      
+      <div id="London" class="tabcontent">
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h1>Paris</h1>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      
+      <div id="Oslo" class="tabcontent">
+        <h1>Oslo</h1>
+        <p>Oslo is the capital of Norway.</p>
+      </div>
+      
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+          <span class="site-footer-owner">Copyright © 2020 by<a href="https://algo-matrix.github.io"> Algo Matrix Ltd.</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
