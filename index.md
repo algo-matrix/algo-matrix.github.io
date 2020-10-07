@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Algo Matrix Ltd.
 
 You can use the [editor on GitHub](https://github.com/algo-matrix/algo-matrix.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
